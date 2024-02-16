@@ -1,0 +1,204 @@
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    background-color: white;
+    height: 100px;
+    position: relative;
+}
+.navbarScroll{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 30px;
+    background-color: transparent;
+    height: 100px;
+    position: relative;
+}
+.logo img{
+    width: 100px;
+}
+.navItems ul,
+.toggle ul{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+.navItems ul li a,
+.toggle ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
+.navbar .navItems ul li a,
+.navbar .toggle ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
+.navItems ul li a:hover,
+.toggle ul li a:hover{
+    color: orange;
+}
+.icon{
+    color: white;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+.icon a{
+    color: white;
+
+}
+.icon a:hover{
+    color: orange;
+}
+.navbar .icon{
+    color: black;
+    display: flex;
+    gap: 10px;
+    font-size: 30px;
+}
+.bar{
+    display: none;
+}
+.header{    
+    position: absolute;
+    top: 410px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+
+}
+.header h1{
+    font-size: 70px;
+    color: white;
+}
+.header h2{
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+}
+.button{
+    display: flex;
+    gap: 10px;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.btn:hover{
+    /* height: 100%; */
+    background-color: orange;
+    transition: 0.3s;
+}
+.btn p{
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.down{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 30px;
+    animation-name: down;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+.down a{
+    font-size: 80px;
+    font-weight: 900;
+    block-size: 100px;
+    color: white;
+}
+@keyframes down {
+    0%{
+        height: 5%;
+    }
+    50%{
+        height: 10%;
+    }
+    100%{
+        height: 0%;
+    }
+}
+
+@media screen and (max-width:916px) {
+    .logo img{
+        width: 70px;
+    }
+    .navItems ul li a,
+    .toggle ul li a{
+        font-size: 15px;
+    }
+    .icon{
+        font-size: 15px;
+    }
+    .header{
+        z-index: -1;
+    }
+    .navItems{
+        z-index: 1;
+    }
+
+}
+@media screen and (max-width:768px) {
+    .navbar{
+        height: 80px;
+    }
+    .bar{
+        display: block;
+    }
+    .navItems{
+        top: 80px;
+        left: -100%;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: calc(100vh - 80px);
+        transition: 0.5s;
+    }
+    .toggle{
+        top: 80px;
+        left:0%;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: calc(100vh - 80px);
+        transition: 0.5s;
+    }
+    .navItems ul,
+    .toggle ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        height: calc(100vh - 80px);
+    }
+    
+}
